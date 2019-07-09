@@ -8,9 +8,8 @@ use OSS\OssClient;
 class VideoController extends Controller
 {
 
-
-    protected $accessKeyId = 'LTAIcL66vWsYEfFN';
-    protected $accessKeySecret = '1NJMDSfhhE91AuYh9QvICxISL51rJ3';
+    protected $accessKeyId = 'LTAItUOfkRs1QP2x';
+    protected $accessKeySecret = 'ncqVH8ULabLKr8gv4VmL8sw7qREqzC';
     protected $bucket='video1809a';
 
     /**
@@ -19,7 +18,7 @@ class VideoController extends Controller
     public function oss1()
     {
         $client = new OssClient($this->accessKeyId,$this->accessKeySecret,env('ALI_OSS_ENOPOINT'));
-        $obj='video1809';
+        $obj='video1809a';
         $cont='Hello world';
         $res = $client->putObject($this->bucket,$obj,$cont);
         var_dump($res);
@@ -30,9 +29,8 @@ class VideoController extends Controller
     public function oss2(){
         $client = new OssClient($this->accessKeyId,$this->accessKeySecret,env('ALI_OSS_ENOPOINT'));
         $obj=md5(time().mt_rand(1,99999)).'.jpg';
-        $local_file='qx.jpg';
+        $local_file='timg.jpg';
         $res=$client->uploadFile($this->bucket,$obj,$local_file);
         var_dump($res);
     }
-
 }
