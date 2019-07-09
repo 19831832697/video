@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('video','video\VideoController@video');
+Route::get('oss1','video\VideoController@oss1');
+Route::get('oss2','video\VideoController@oss2');
