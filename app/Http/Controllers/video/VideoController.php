@@ -8,17 +8,17 @@ use OSS\OssClient;
 class VideoController extends Controller
 {
 
-    protected $accessKeyId = 'LTAItUOfkRs1QP2x';
-    protected $accessKeySecret = 'ncqVH8ULabLKr8gv4VmL8sw7qREqzC';
-    protected $bucket='video1809a';
+    protected $accessKeyId = 'LTAICnxuiEEuT5UE';
+    protected $accessKeySecret = 'WwU0of8X70kj0S5mVr2Qa6xEUbnAnx';
+    protected $bucket='video1809';
 
     /**
-     * 上传文字
+     * 上传图片
      */
     public function oss1()
     {
         $client = new OssClient($this->accessKeyId,$this->accessKeySecret,env('ALI_OSS_ENOPOINT'));
-        $obj='video1809a';
+        $obj='video1809';
         $cont='Hello world';
         $res = $client->putObject($this->bucket,$obj,$cont);
         var_dump($res);
