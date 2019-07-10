@@ -4,7 +4,9 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VidelModel extends Model
+class VideoModel extends Model
 {
-    protected $table="videos";
+    public $table="videos";
+    public $timestamps=false;
+    public $primaryKey='vid';
 }

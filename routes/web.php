@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('oss1','video\VideoController@oss1');
-Route::get('oss2','video\VideoController@oss2');
+Route::get('oss2','video\VideoController@oss2'); //上传图片
+
+Route::get('ToOss','cron\CronController@ToOss'); //定时任务

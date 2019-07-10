@@ -12,9 +12,7 @@ class VideoController extends Controller
     protected $accessKeySecret = 'WwU0of8X70kj0S5mVr2Qa6xEUbnAnx';
     protected $bucket='video1809';
 
-    /**
-     * 上传图片
-     */
+
     public function oss1()
     {
         $client = new OssClient($this->accessKeyId,$this->accessKeySecret,env('ALI_OSS_ENOPOINT'));
@@ -26,7 +24,8 @@ class VideoController extends Controller
     /**
      * 上传图片
      */
-    public function oss2(){
+    public function oss2()
+    {
         $client = new OssClient($this->accessKeyId,$this->accessKeySecret,env('ALI_OSS_ENOPOINT'));
         $obj=md5(time().mt_rand(1,99999)).'.jpg';
         $local_file='timg.jpg';
