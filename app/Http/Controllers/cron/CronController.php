@@ -28,7 +28,7 @@ class CronController extends Controller
             if($v=='.' || $v=='..'){
                 continue;
             }
-            $file_name = Str::random(5).'.jpg';
+            $file_name = 'files/'.$v;
             $local_file = $file_path . '/'.$v;
 //            echo '本地文件：'.$local_file;
             try{
