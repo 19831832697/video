@@ -22,3 +22,5 @@ Route::get('ToOss','cron\CronController@ToOss'); //定时任务
 
 Route::get('videoShow','video\VideoController@videoShow');
 Route::get('show','video\VideoController@show');
+
+Route::get('ossNotify','oss\OssController@ossNotify');

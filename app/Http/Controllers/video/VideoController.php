@@ -12,7 +12,8 @@ class VideoController extends Controller
      * 视频播放
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function videoShow(){
+    public function videoShow()
+    {
         $vid = $_GET['vid'];
 
         $data=VideoModel::where('vid',$vid)->first()->toArray();
