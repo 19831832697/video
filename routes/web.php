@@ -21,3 +21,4 @@ Route::get('oss2','test\TestController@oss2'); //上传图片
 Route::get('ToOss','cron\CronController@ToOss'); //定时任务
 
 Route::get('videoShow','video\VideoController@videoShow');
+Route::get('show','video\VideoController@show');
